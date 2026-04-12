@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Brasa Urbana — Menú completo. Carnes a la brasa, combos, extras y bebidas. Pide por WhatsApp." />
+  <title>Menú — Brasa Urbana 🔥</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="BrasaUrbana" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+</head>
+<body>
+
+  <!-- ───── FLOATING WHATSAPP ───── -->
+  <a
+    class="wa-float"
+    href="https://wa.me/573174886630?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Brasa%20Urbana%20%F0%9F%94%A5"
+    target="_blank"
+    aria-label="Pedir por WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" fill="currentColor" width="28" height="28" aria-hidden="true">
+      <path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.469 2.027 7.773L0 32l8.466-2.001A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 0 1-6.77-1.847l-.485-.287-5.026 1.187 1.23-4.905-.317-.505A13.264 13.264 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.3-9.688c-.4-.2-2.365-1.166-2.732-1.299-.367-.133-.634-.2-.9.2-.267.4-1.033 1.299-1.267 1.566-.233.267-.467.3-.867.1-.4-.2-1.688-.622-3.214-1.983-1.188-1.059-1.99-2.367-2.224-2.767-.233-.4-.025-.616.175-.816.18-.18.4-.467.6-.7.2-.233.267-.4.4-.667.133-.267.067-.5-.033-.7-.1-.2-.9-2.167-1.233-2.967-.325-.78-.655-.673-.9-.686l-.767-.013c-.267 0-.7.1-1.067.5-.367.4-1.4 1.367-1.4 3.333s1.433 3.867 1.633 4.133c.2.267 2.82 4.307 6.833 6.033.955.413 1.7.659 2.28.844.958.306 1.83.263 2.519.16.768-.115 2.365-.967 2.699-1.9.333-.933.333-1.733.233-1.9-.1-.167-.367-.267-.767-.467z"/>
+    </svg>
+    <span>Pedir ahora</span>
+  </a>
+
+  <!-- ───── HEADER ───── -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🔥</span>
+        <span class="logo-text">Brasa<strong>Urbana</strong></span>
+      </a>
+      <nav class="header-nav">
+        <a href="index.html">Inicio</a>
+        <a href="menu.html" class="nav-active">Menú</a>
+        <a href="index.html#ubicacion">Ubicación</a>
+        <a href="https://wa.me/573174886630?text=Hola%2C%20quiero%20hacer%20un%20pedido" target="_blank" class="btn-nav">Pedir →</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ───── MENU HERO ───── -->
+  <section class="menu-page-hero">
+    <div class="menu-hero-glow" aria-hidden="true"></div>
+    <div class="container">
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M16 10H4M9 5l-5 5 5 5"/></svg>
+        Volver
+      </a>
+      <div class="section-label" style="margin-top:20px;">📋 Menú completo</div>
+      <h1 class="menu-page-title">Elige. Pide. Come.</h1>
+      <!-- URGENCIA: tiempo de entrega visible desde el primer segundo -->
+      <p class="menu-page-sub">Toca cualquier plato → mensaje listo en WhatsApp → en tu puerta en ~20 min.</p>
+      <div class="menu-hero-trust">
+        <span>🕐 Abierto ahora</span>
+        <span>·</span>
+        <span>Entrega ~20 min</span>
+        <span>·</span>
+        <span>⭐ 4.9 / 5</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── TABS ANCHORS ───── -->
+  <div class="menu-tabs-wrap">
+    <div class="container">
+      <div class="menu-tabs" role="tablist">
+        <a class="menu-tab" href="#carnes">🥩 Carnes</a>
+        <a class="menu-tab" href="#combos">🍽️ Combos</a>
+        <a class="menu-tab" href="#extras">🍟 Extras</a>
+        <a class="menu-tab" href="#bebidas">🥤 Bebidas</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       CARNES — imagen derecha
+  ═══════════════════════════════════════════ -->
+  <section class="menu-section" id="carnes">
+    <div class="container">
+      <div class="menu-section-inner">
+
+        <div class="menu-section-content">
+          <div class="menu-section-header">
+            <span class="section-label">🥩 Carnes</span>
+            <h2 class="menu-section-title">Selladas al carbón</h2>
+            <!-- MICROCOPY: beneficio concreto, no descripción -->
+            <p class="menu-section-desc">Sin congelados, sin microondas. Del fuego a tu puerta.</p>
+          </div>
+          <div class="menu-list">
+
+            <!-- PRODUCTO ESTRELLA — borde naranja, badge destacado, CTA diferenciado -->
+            <article class="menu-item card menu-item--featured" data-product="Costilla BBQ" data-price="$32.900">
+              <div class="menu-item-info">
+                <h3>Costilla BBQ</h3>
+                <!-- MICROCOPY: sensorial + específico -->
+                <p>6h al humo de leña. La carne se desprende sola. Glaseada con BBQ artesanal de la casa.</p>
+                <div class="menu-item-badges">
+                  <span class="item-tag item-tag--hot">🏆 Más pedida</span>
+                  <span class="item-tag">⏱ Lista en 20 min</span>
+                </div>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$32.900</span>
+                <!-- CTA DIRECTO — sin modal, va a WA inmediatamente -->
+                <span class="card-cta cta--featured">
+                  Quiero esta
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="menu-item card" data-product="Churrasco Sellado" data-price="$38.900">
+              <div class="menu-item-info">
+                <h3>Churrasco Sellado</h3>
+                <!-- MICROCOPY: personalización = menos duda -->
+                <p>300g angus al carbón. Dinos tu punto (rojo, ¾ o cocido) y lo hacemos perfecto.</p>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$38.900</span>
+                <span class="card-cta">
+                  Lo quiero
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="menu-item card" data-product="Entraña a la Brasa" data-price="$35.900">
+              <div class="menu-item-info">
+                <h3>Entraña a la Brasa</h3>
+                <!-- MICROCOPY: el tiempo de preparación = señal de calidad -->
+                <p>Marinada 24h en hierbas y ajo. Corte argentino con chimichurri de la casa.</p>
+                <div class="menu-item-badges">
+                  <span class="item-tag">⚡ Favorita del chef</span>
+                </div>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$35.900</span>
+                <span class="card-cta">
+                  Lo quiero
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="menu-item card" data-product="Pollo al Carbón" data-price="$28.900">
+              <div class="menu-item-info">
+                <h3>Pollo al Carbón</h3>
+                <p>Pechuga marinada con especias y ají. Jugosa por dentro, dorada por fuera.</p>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$28.900</span>
+                <span class="card-cta">
+                  Lo quiero
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="menu-item card" data-product="Chorizo Artesanal (x3)" data-price="$18.900">
+              <div class="menu-item-info">
+                <h3>Chorizo Artesanal <span class="badge-inline">×3</span></h3>
+                <!-- MICROCOPY: el precio bajo necesita anclaje de valor -->
+                <p>Hechos en casa, a las brasas. Perfectos para abrir boca o para pedir doble.</p>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$18.900</span>
+                <span class="card-cta">
+                  Lo quiero
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="menu-item card" data-product="Burger Brasa" data-price="$24.900">
+              <div class="menu-item-info">
+                <h3>Burger Brasa</h3>
+                <p>Carne al carbón, cheddar ahumado, cebolla caramelizada y salsa secreta. Pan brioche.</p>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$24.900</span>
+                <span class="card-cta">
+                  Lo quiero
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="menu-section-img-wrap">
+          <div class="menu-section-img">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80&fm=webp" alt="Carnes a la brasa" width="800" height="1000" loading="lazy" />
+            <div class="menu-section-img-overlay"></div>
+            <span class="menu-section-img-label">Carnes &amp; Cortes</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="menu-section-divider" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+       COMBOS — imagen izquierda
+       NOTA: combos abren modal (personalización)
+  ═══════════════════════════════════════════ -->
+  <section class="menu-section menu-section--reversed" id="combos">
+    <div class="container">
+      <div class="menu-section-inner">
+
+        <div class="menu-section-img-wrap">
+          <div class="menu-section-img">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80&fm=webp" alt="Combos Brasa Urbana" width="800" height="1000" loading="lazy" />
+            <div class="menu-section-img-overlay"></div>
+            <span class="menu-section-img-label">Combos &amp; Picadas</span>
+          </div>
+        </div>
+
+        <div class="menu-section-content">
+          <div class="menu-section-header">
+            <span class="section-label">🍽️ Combos</span>
+            <h2 class="menu-section-title">Más comida, mejor precio</h2>
+            <!-- ANCLA DE VALOR: por qué el combo es la decisión inteligente -->
+            <p class="menu-section-desc">Pides uno y llegamos con todo. Calculado para que no sobre hambre.</p>
+          </div>
+          <div class="menu-list">
+
+            <!-- COMBO ESTRELLA — producto con mayor ticket promedio -->
+            <article class="menu-item card menu-item--featured" data-product="Picada Brasa Urbana (para 2 personas)" data-price="$49.900">
+              <div class="menu-item-info">
+                <h3>Picada Brasa Urbana</h3>
+                <p>Costilla + chorizo + morcilla + papa criolla + chimichurri. Todo en una sola bandeja.</p>
+                <div class="menu-item-badges">
+                  <span class="item-tag item-tag--hot">🏆 El más pedido</span>
+                  <!-- PRECIO ANCLAJE: ahorro concreto vs pedir por separado -->
+                  <span class="item-tag item-tag--saving">🤑 Ahorrás ~$15.000</span>
+                  <span class="badge-inline">Para 2</span>
+                </div>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$49.900</span>
+                <span class="card-cta cta--featured">
+                  Lo quiero
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="menu-item card" data-product="Combo Familiar Brasa Urbana (para 4 personas)" data-price="$89.900">
+              <div class="menu-item-info">
+                <h3>Combo Familiar</h3>
+                <!-- MICROCOPY: desglosar lo que incluye = reducir duda del precio alto -->
+                <p>Churrasco + costilla + 4 chorizos + 4 acompañamientos + 4 bebidas. Para 4 sin que falte nada.</p>
+                <div class="menu-item-badges">
+                  <span class="badge-inline">Para 4</span>
+                  <span class="item-tag item-tag--saving">🤑 Ahorrás ~$30.000</span>
+                </div>
+              </div>
+              <div class="menu-item-right">
+                <!-- PRECIO POR PERSONA: reduce el impacto del precio alto -->
+                <div class="price-stack">
+                  <span class="price">$89.900</span>
+                  <span class="price-per">~$22.500 / persona</span>
+                </div>
+                <span class="card-cta">
+                  Lo quiero
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="menu-item card" data-product="Combo Burger Brasa (Burger + Papa Frita + Bebida)" data-price="$31.900">
+              <div class="menu-item-info">
+                <h3>Combo Burger Brasa</h3>
+                <p>Burger Brasa + papa frita al horno + bebida a elección. Todo junto, todo caliente.</p>
+                <div class="menu-item-badges">
+                  <span class="item-tag">🔥 Trending</span>
+                </div>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$31.900</span>
+                <span class="card-cta">
+                  Lo quiero
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="menu-section-divider" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+       EXTRAS — imagen derecha
+  ═══════════════════════════════════════════ -->
+  <section class="menu-section" id="extras">
+    <div class="container">
+      <div class="menu-section-inner">
+
+        <div class="menu-section-content">
+          <div class="menu-section-header">
+            <span class="section-label">🍟 Extras</span>
+            <h2 class="menu-section-title">El detalle que completa</h2>
+            <!-- MICROCOPY: los extras no son opcionales cuando los describes bien -->
+            <p class="menu-section-desc">Nadie pidió solo la carne y no se arrepintió.</p>
+          </div>
+          <div class="menu-list">
+
+            <article class="menu-item card menu-item--featured" data-product="Papa Criolla Asada" data-price="$8.900">
+              <div class="menu-item-info">
+                <h3>Papa Criolla Asada</h3>
+                <!-- MICROCOPY: textura = experiencia sensorial -->
+                <p>Crujiente por fuera, cremosa por dentro. Con sal de ajo y perejil. La pedirás doble.</p>
+                <div class="menu-item-badges">
+                  <span class="item-tag item-tag--hot">🥇 Favorita de los clientes</span>
+                </div>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$8.900</span>
+                <span class="card-cta cta--featured">
+                  Agregar
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="menu-item card" data-product="Yuca Frita" data-price="$7.900">
+              <div class="menu-item-info">
+                <h3>Yuca Frita</h3>
+                <p>Esponjosa, caliente y lista para bañarse en chimichurri. La combinación obvia.</p>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$7.900</span>
+                <span class="card-cta">
+                  Agregar
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="menu-item card" data-product="Chimichurri de la Casa (porción extra)" data-price="$3.900">
+              <div class="menu-item-info">
+                <h3>Chimichurri de la Casa</h3>
+                <!-- MICROCOPY: "extra" = implica que ya lo tienes, pero más es mejor -->
+                <p>Receta propia con hierbas frescas y ajo. Por $3.900, no hay excusa para no pedir extra.</p>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$3.900</span>
+                <span class="card-cta">
+                  Agregar
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="menu-item card" data-product="Ensalada Fresca de la Casa" data-price="$6.900">
+              <div class="menu-item-info">
+                <h3>Ensalada Fresca de la Casa</h3>
+                <p>Lechuga, tomate, pepino, cebolla morada y aderezo de limón. El balance perfecto.</p>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$6.900</span>
+                <span class="card-cta">
+                  Agregar
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="menu-section-img-wrap">
+          <div class="menu-section-img">
+            <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=800&q=80&fm=webp" alt="Extras y acompañamientos" width="800" height="1000" loading="lazy" />
+            <div class="menu-section-img-overlay"></div>
+            <span class="menu-section-img-label">Extras &amp; Acompañamientos</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="menu-section-divider" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+       BEBIDAS — imagen izquierda
+  ═══════════════════════════════════════════ -->
+  <section class="menu-section menu-section--reversed" id="bebidas">
+    <div class="container">
+      <div class="menu-section-inner">
+
+        <div class="menu-section-img-wrap">
+          <div class="menu-section-img">
+            <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=800&q=80&fm=webp" alt="Bebidas Brasa Urbana" width="800" height="1000" loading="lazy" />
+            <div class="menu-section-img-overlay"></div>
+            <span class="menu-section-img-label">Bebidas</span>
+          </div>
+        </div>
+
+        <div class="menu-section-content">
+          <div class="menu-section-header">
+            <span class="section-label">🥤 Bebidas</span>
+            <h2 class="menu-section-title">Para apagar el fuego</h2>
+            <p class="menu-section-desc">Frías, hechas al momento o bien heladas. Sin excusa para tener sed.</p>
+          </div>
+          <div class="menu-list">
+
+            <article class="menu-item card menu-item--featured" data-product="Limonada de Coco" data-price="$9.900">
+              <div class="menu-item-info">
+                <h3>Limonada de Coco</h3>
+                <!-- MICROCOPY: combinación perfecta = reduce fricción de decisión -->
+                <p>Cremosa, fría, hecha al momento. La compañera ideal de cualquier carne a la brasa.</p>
+                <div class="menu-item-badges">
+                  <span class="item-tag item-tag--hot">🥤 La más pedida</span>
+                </div>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$9.900</span>
+                <span class="card-cta cta--featured">
+                  Agregar
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="menu-item card" data-product="Agua Panela con Limón" data-price="$6.900">
+              <div class="menu-item-info">
+                <h3>Agua Panela con Limón</h3>
+                <p>Clásica colombiana. Dulce, fría y refrescante. La que pide la abuela y la que repites.</p>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$6.900</span>
+                <span class="card-cta">
+                  Agregar
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="menu-item card" data-product="Gaseosa (lata)" data-price="$5.900">
+              <div class="menu-item-info">
+                <h3>Gaseosa <span class="badge-inline">Lata</span></h3>
+                <p>Coca-Cola, Sprite o Postobón. Dinos cuál y va bien fría.</p>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$5.900</span>
+                <span class="card-cta">
+                  Agregar
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="menu-item card" data-product="Agua Mineral (500ml)" data-price="$4.500">
+              <div class="menu-item-info">
+                <h3>Agua Mineral</h3>
+                <p>500ml, bien fría. Con o sin gas, la que prefieras.</p>
+              </div>
+              <div class="menu-item-right">
+                <span class="price">$4.500</span>
+                <span class="card-cta">
+                  Agregar
+                  <svg class="cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── CTA FINAL — URGENCIA + FRICCIÓN CERO ───── -->
+  <div class="menu-final-cta">
+    <div class="container menu-final-cta-inner">
+      <!-- MICROCOPY: la duda más común = "¿me atienden?" → la eliminamos aquí -->
+      <p>¿Alguna duda? Escríbenos y te respondemos al instante.</p>
+      <a class="btn-primary" href="https://wa.me/573174886630?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20el%20men%C3%BA%20de%20Brasa%20Urbana%20%F0%9F%94%A5" target="_blank">
+        💬 Preguntar por WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- ───── FOOTER ───── -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🔥</span>
+        <span class="logo-text">Brasa<strong>Urbana</strong></span>
+      </a>
+      <p class="footer-copy">© 2025 Brasa Urbana · Medellín, Colombia</p>
+      <div class="footer-links">
+        <a href="https://wa.me/573174886630" target="_blank">WhatsApp</a>
+        <span>·</span>
+        <a href="index.html">Inicio</a>
+        <span>·</span>
+        <a href="index.html#ubicacion">Ubicación</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ───── MODAL — solo para combos ───── -->
+  <div class="order-modal" id="orderModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-card">
+      <div class="modal-emoji">🔥</div>
+      <h3 id="modalTitle">¡Buena elección!</h3>
+      <p id="modalProduct"></p>
+      <p class="modal-price" id="modalPrice"></p>
+      <!-- MICROCOPY: el modal ahora es útil, no un obstáculo -->
+      <p class="modal-note">¿Alguna personalización? Cuéntanos en el chat.</p>
+      <div class="modal-actions">
+        <a class="btn-primary" id="modalConfirm" target="_blank">Confirmar por WhatsApp →</a>
+        <button class="btn-ghost sm" id="modalCancel">Ver más opciones</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
