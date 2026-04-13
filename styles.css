@@ -200,21 +200,60 @@ button { cursor:pointer; border:none; background:none; font:inherit; color:inher
 .wa-float svg { flex-shrink:0; }
 
 /* ─── HEADER ─── */
+/*
+ * Estructura HTML (ambas páginas):
+ *   <header class="site-header">
+ *     <div class="container header-inner">  ← fila logo (siempre visible)
+ *       <a class="logo">…</a>
+ *     </div>
+ *     <nav class="header-nav">…</nav>        ← nav (posición varía por breakpoint)
+ *   </header>
+ *
+ * Desktop (>640px): header-inner con logo a la izq, header-nav flotando a la der
+ *                   en la misma línea visual (height: 60px total).
+ * Mobile  (≤640px): header-inner con solo logo (52px) + header-nav como
+ *                   segunda fila scrollable (44px). Total: 96px.
+ */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(13,13,13,0.88);
+  background: rgba(13,13,13,0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
+
+/* ── Logo row ── */
 .header-inner {
+  position: relative;    /* ancla para el nav absoluto en desktop */
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 60px;
 }
+
+/* ── Nav: desktop — misma línea que el logo, pegado a la derecha ── */
+.header-nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 0;
+}
+.header-nav a:not(.btn-nav) {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+.header-nav a:not(.btn-nav):hover,
+.header-nav a.nav-active { color: var(--text); }
+
+/* ── Logo ── */
 .logo {
   display: flex;
   align-items: center;
@@ -224,16 +263,7 @@ button { cursor:pointer; border:none; background:none; font:inherit; color:inher
   letter-spacing: -0.02em;
 }
 .logo strong { color: var(--accent); }
-.logo-icon   { font-size:20px; }
-.header-nav  { display:flex; align-items:center; gap:20px; }
-.header-nav a:not(.btn-nav) {
-  color: var(--text-muted);
-  font-size: 14px;
-  font-weight: 500;
-  transition: color var(--transition);
-}
-.header-nav a:not(.btn-nav):hover,
-.header-nav a.nav-active { color: var(--text); }
+.logo-icon   { font-size: 20px; }
 
 /* ─── HERO ─── */
 .hero {
@@ -1276,16 +1306,84 @@ button { cursor:pointer; border:none; background:none; font:inherit; color:inher
 }
 
 @media (max-width: 640px) {
-  .header-nav a:not(.btn-nav) { display:none; }
-  .hero { min-height:88vh; }
-  .hero-ctas { flex-direction:column; align-items:stretch; }
-  .hero-ctas a { text-align:center; justify-content:center; }
-  .footer-inner { flex-direction:column; align-items:flex-start; }
-  .wa-float span { display:none; }
-  .wa-float { padding:14px; border-radius:50%; }
-  .cta-section { padding:80px 0; }
-  .menu-preview-grid .menu-item { flex-direction:column; align-items:flex-start; }
-  .menu-preview-grid .menu-item-right { flex-direction:row; width:100%; justify-content:space-between; align-items:center; }
+  /* ── Header mobile: 2 filas ──────────────────────────
+   * Fila 1 (.header-inner): solo logo — 52px
+   * Fila 2 (.header-nav):   scroll horizontal — 44px
+   * Total sticky: 96px
+   * ─────────────────────────────────────────────────── */
+  .site-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-inner {
+    height: 52px;
+    padding: 0 16px;
+    flex-shrink: 0;
+  }
+
+  .logo      { font-size: 16px; }
+  .logo-icon { font-size: 18px; }
+
+  /* Cancela posición absoluta del desktop, convierte en fila 2 */
+  .header-nav {
+    position: static;
+    height: 44px;
+    width: 100%;
+    gap: 0;
+    padding: 0 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .header-nav::-webkit-scrollbar { display: none; }
+
+  /* Todos los links visibles, tap target 44px */
+  .header-nav a:not(.btn-nav) {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    height: 44px;
+    padding: 0 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color var(--transition), border-color var(--transition);
+  }
+  .header-nav a:not(.btn-nav):hover,
+  .header-nav a:not(.btn-nav).nav-active {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+  }
+
+  /* "Pedir" empujado al extremo derecho */
+  .header-nav .btn-nav {
+    flex-shrink: 0;
+    margin-left: auto;
+    align-self: center;
+    height: 30px;
+    padding: 0 14px;
+    font-size: 12px;
+  }
+
+  /* El menu-tabs-wrap debe quedar debajo de 96px de header */
+  .menu-tabs-wrap { top: 96px; }
+
+  /* ── Resto de reglas mobile ── */
+  .hero          { min-height: 88vh; }
+  .hero-ctas     { flex-direction: column; align-items: stretch; }
+  .hero-ctas a   { text-align: center; justify-content: center; }
+  .footer-inner  { flex-direction: column; align-items: flex-start; }
+  .wa-float span { display: none; }
+  .wa-float      { padding: 14px; border-radius: 50%; }
+  .cta-section   { padding: 80px 0; }
+  .menu-preview-grid .menu-item       { flex-direction: column; align-items: flex-start; }
+  .menu-preview-grid .menu-item-right { flex-direction: row; width: 100%; justify-content: space-between; align-items: center; }
 }
 
 @media (min-width: 768px) {

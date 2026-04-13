@@ -133,8 +133,8 @@
   if (menuTabs.length) {
     const sectionIds = ['carnes', 'combos', 'extras', 'bebidas'];
     const sections   = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
-    // Offset = alto del header (60px) + tabs bar (47px) + margen
-    const OFFSET = 130;
+    // Offset = header (60px desktop / 96px mobile) + tabs bar (~47px) + margen
+    const OFFSET = window.innerWidth <= 640 ? 150 : 130;
 
     function updateActiveTab() {
       let current = sectionIds[0];
@@ -158,7 +158,9 @@
       const target = document.getElementById(id);
       if (target) {
         e.preventDefault();
-        const top = target.getBoundingClientRect().top + window.scrollY - 68;
+        // Mobile header = 96px (52px logo + 44px nav), desktop = 60px
+        const headerH = window.innerWidth <= 640 ? 96 : 60;
+        const top = target.getBoundingClientRect().top + window.scrollY - headerH - 8;
         window.scrollTo({ top, behavior: 'smooth' });
       }
     });
